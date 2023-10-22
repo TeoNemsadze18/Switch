@@ -9,13 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        ZStack {
+            LightSwitch()
+            TitleView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct TitleView: View {
+    var body: some View {
+        VStack {
+            Text("click and change")
+                .font(.headline)
+            Text("→ → → →")
+            
+                .font(.largeTitle)
+        }
+        .foregroundColor(.white)
     }
 }
